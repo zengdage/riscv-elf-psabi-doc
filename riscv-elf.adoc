@@ -467,7 +467,7 @@ is mangled as
 
 [,c]
 ----
-    // The type of `i` is pointer type and 's' equals 1, so 'number' also equals 4 (i.e., 1 * sizeof(int *)).
+    // The type of `i` is pointer type and 's' equals 1, so 'number' also equals 4 (i.e., 1 * sizeof(*i)).
 
     // VLS Mode, VLEN=128
     vint32m1_t _ZGVr1N4l4_foo  (int *i);  // LMUL=1
@@ -509,7 +509,7 @@ is mangled as
 
 [,c]
 ----
-    // 's' equals 1, and 'number' equals 4 (i.e., 1 * sizeof(int *)).
+    // 's' equals 1, and 'number' equals 4 (i.e., 1 * sizeof(*i)).
 
     // VLS Mode, VLEN=128
     vint32m1_t _ZGVr1N4R4_foo  (int *i);  // LMUL=1
